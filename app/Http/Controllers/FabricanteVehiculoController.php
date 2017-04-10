@@ -5,18 +5,22 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class FabricanteController extends Controller {
+class FabricanteVehiculoController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($id)
 	{
-		return "Mostrando lista de fabricantes";
+		
 	}
 
+	public function showAll()
+	{
+		return "Mostrando los vehiculos que pertenecen al fabricante ";
+	}
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -24,9 +28,8 @@ class FabricanteController extends Controller {
 	 */
 	public function create()
 	{
-		return "Mostrando el menu para crear un fabricante";
+		//
 	}
-
 
 	/**
 	 * Store a newly created resource in storage.
@@ -46,7 +49,7 @@ class FabricanteController extends Controller {
 	 */
 	public function show($id)
 	{
-		return "Mostrando el fabricante con ID $id";
+		//
 	}
 
 	/**
@@ -57,7 +60,7 @@ class FabricanteController extends Controller {
 	 */
 	public function edit($id)
 	{
-		return "Mostrando el formulario para editar el fabricante con ID $id";
+		//
 	}
 
 	/**
@@ -68,7 +71,7 @@ class FabricanteController extends Controller {
 	 */
 	public function update($id)
 	{
-		return "Mostrando el formulario para actualizar el fabricante con ID $id";
+		//
 	}
 
 	/**
@@ -79,7 +82,7 @@ class FabricanteController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		return "Mostrando el formulario para eliminar el fabricante con ID $id";
+		//
 	}
 
 }
