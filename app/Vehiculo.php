@@ -3,7 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 
 class Vehiculo extends Model  {
-	protected $table= "vehiculo";
+	protected $table= "vehiculos";
 	protected $primarykey="serie";
 	protected $fillable = array('color','cilindraje','potencia');
 
