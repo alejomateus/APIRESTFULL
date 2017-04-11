@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Vehiculo;
 use Illuminate\Http\Request;
 
 class VehiculoController extends Controller {
@@ -14,7 +14,13 @@ class VehiculoController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		$vehiculo = Vehiculo::all();
+		if(!$vehiculo){
+			return response()->json(['mensaje'=>"No existen vehiculos",'codigo'=>404],404);
+		}
+		else{
+			return response()->json(['datos'=>$vehiculo]);
+		}
 	}
 
 	/**
@@ -45,7 +51,13 @@ class VehiculoController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$vehiculo = Vehiculo::find($id);
+		if(!$vehiculo){
+			return response()->json(['mensaje'=>"No hay vehiculo con numero de serie $id",'codigo'=>404],404);
+		}
+		else{
+			return response()->json(['datos'=>$vehiculo]);
+		}
 	}
 
 	/**
